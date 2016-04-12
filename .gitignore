@@ -1,0 +1,10 @@
+.Rproj.user
+.Rhistory
+.RData
+IDMr.Rproj
+
+DESCRIPTION
+NAMESPACE
+.Rbuildignore
+
+output/
