@@ -13,8 +13,7 @@ main = function() {
   devtools::load_all()
 
   data.files = list.files(path = "data", pattern = ".csv$", full.names = TRUE)
-  # data.files = c("data/feridas.csv", "data/nuvem.csv")[1]
-
+ 
   # Running for all the bases
   aux = lapply(data.files, function(file){
     
@@ -24,7 +23,6 @@ main = function() {
     dataset = getData(filename = file)
     catf("   - data read")
     
-
     obj = runMetaLevel(dataset = dataset)
     catf("   - meta-level done")
         
