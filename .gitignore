@@ -3,6 +3,10 @@
 .RData
 
 .Rbuildignore
+*.eps
 
-output/
+output/raws/
+output/predictions/*.csv
+output/*.xlsx
+misc/
 TODO

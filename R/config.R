@@ -3,6 +3,8 @@
 
 # Loading packages
 library("mlr")
+library("ggplot2")
+library("reshape2")
 
 # Possible learners
 predefined.learners = c("classif.randomForest", "classif.svm", "classif.kknn",
