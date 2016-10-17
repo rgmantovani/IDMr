@@ -4,7 +4,7 @@
 runMetaLevel = function(dataset = dataset) {
 
   # 1 - Defining a multilabel task
-  target.names = colnames(dataset)[grep("Class", colnames(dataset))]
+  target.names = colnames(dataset)[grep("class", colnames(dataset))]
 
   # targets must be logical, So (AD converts to TRUE and NAD to FALSE)
   for(target in target.names) {
@@ -15,7 +15,7 @@ runMetaLevel = function(dataset = dataset) {
     dataset[, target] = as.logical(temp)
   }
 
-  # data = dataset - first column
+  # data = not using the first column
   task = makeMultilabelTask(data = dataset[2:ncol(dataset)], target = target.names)
   task = removeConstantFeatures(task)
 
@@ -28,12 +28,11 @@ runMetaLevel = function(dataset = dataset) {
 
   # 4. defining resampling strategy (Leave-One-Out)
   rdesc = makeResampleDesc(method = "LOO")
-
+ 
   # 5. Runing exrperiment 
   obj = benchmark(learners = learners, tasks = task, resamplings = rdesc, measures = meas)
  
   return(obj)
-
 }
 
 # -------------------------------------------------------------------------------------------------

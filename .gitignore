@@ -4,9 +4,9 @@
 
 .Rbuildignore
 *.eps
-*.csv
 output/raws/
 output/predictions/*.csv
 output/*.xlsx
+output/*.csv
 misc/
 TODO

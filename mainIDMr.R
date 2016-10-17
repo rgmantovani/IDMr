@@ -46,14 +46,11 @@ main = function() {
     catf("   - results saved")
     
     return(ret)
-
   })
 
   # Save CSV files with average results
   summarizeResults(ret.list = aux)
-
   catf("Done !!!")
-     
 
 }
 
