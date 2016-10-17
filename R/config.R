@@ -5,6 +5,7 @@
 library("mlr")
 library("ggplot2")
 library("reshape2")
+library("BBmisc")
 
 configureMlr(on.learner.error = "warn")
 configureMlr(show.info = TRUE)

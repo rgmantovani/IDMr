@@ -1,7 +1,7 @@
 # -------------------------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------------------------
 
-runMetaLevel = function(dataset = dataset) {
+runMetaLevel = function(dataset = dataset, filename = filename) {
 
   # 1 - Defining a multilabel task
   target.names = colnames(dataset)[grep("class", colnames(dataset))]
@@ -16,7 +16,7 @@ runMetaLevel = function(dataset = dataset) {
   }
 
   # data = not using the first column
-  task = makeMultilabelTask(data = dataset[2:ncol(dataset)], target = target.names)
+  task = makeMultilabelTask(id = filename, data = dataset[2:ncol(dataset)], target = target.names)
   task = removeConstantFeatures(task)
 
   # 2. Defining the evaluating measures

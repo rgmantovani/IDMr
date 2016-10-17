@@ -23,7 +23,7 @@ main = function() {
     dataset = getData(filename = file)
     catf("   - data read")
     
-    obj = runMetaLevel(dataset = dataset)
+    obj = runMetaLevel(dataset = dataset, filename = filename)
     catf("   - meta-level done")
         
     # Aggregated multilabel measures (Hamming loss)
